@@ -68,7 +68,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         gsm_properties();
         property_set("ro.build.fingerprint", "samsung/lt03ltesks/lt03lte:4.4.2/KOT49H/P605SKSUCND6:user/release-keys");
         property_set("ro.build.description", "hlteusc-user 4.4.2 KOT49H P605SKSUCND6 release-keys");
-        property_set("ro.product.model", "SM-P605M");
+        property_set("ro.product.model", "SM-P605S");
         property_set("ro.product.device", "lt03ltesks");
     } else if (strstr(bootloader, "P605M")) {
         /* lt03ltecmo */
@@ -77,6 +77,13 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.description", "hlteusc-user 4.4.2 KOT49H P605UBUUCND6 release-keys");
         property_set("ro.product.model", "SM-P605M");
         property_set("ro.product.device", "lt03ltecmo");
+    } else if (strstr(bootloader, "P607T")) {
+        /* lt03ltetmo */
+        gsm_properties();
+        property_set("ro.build.fingerprint", "samsung/lt03ltetmo/lt03ltetmo:4.4.2/KOT49H/P607TUVUANE2:user/release-keys");
+        property_set("ro.build.description", "lt03ltetmo-user 4.4.2 KOT49H P607TUVUANE2 release-keys");
+        property_set("ro.product.model", "SM-P607T");
+        property_set("ro.product.device", "lt03ltetmo");
     } else {
         /* lt03ltexx */
         gsm_properties();

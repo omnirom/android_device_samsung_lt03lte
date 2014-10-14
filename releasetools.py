@@ -17,9 +17,10 @@
 """Custom OTA commands for lt03lte devices"""
 
 def FullOTA_InstallEnd(info):
-  info.script.AppendExtra('ifelse(is_substring("P605X", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/gsm/* /system/lib/"));')
-  info.script.AppendExtra('ifelse(is_substring("P605S", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/gsm/* /system/lib/"));')
   info.script.AppendExtra('ifelse(is_substring("P605M", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/gsm/* /system/lib/"));')
+  info.script.AppendExtra('ifelse(is_substring("P605S", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/gsm/* /system/lib/"));')
+  info.script.AppendExtra('ifelse(is_substring("P605T", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/gsm/* /system/lib/"));')
+  info.script.AppendExtra('ifelse(is_substring("P605X", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/gsm/* /system/lib/"));')
   info.script.AppendExtra('ifelse(is_substring("P605V", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/cdma/* /system/lib/"));')
   info.script.AppendExtra('delete_recursive("/system/lib/gsm/");')
   info.script.AppendExtra('delete_recursive("/system/lib/cdma/");')
