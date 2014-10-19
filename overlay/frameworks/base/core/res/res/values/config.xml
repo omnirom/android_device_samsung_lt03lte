@@ -249,4 +249,6 @@
 
     <bool name="config_hotswapCapable">true</bool>
 
+    <!-- Custom hardware button brightness -->
+    <bool name="config_button_brightness_support">true</bool>
 </resources>
