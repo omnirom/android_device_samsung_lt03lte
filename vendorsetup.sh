@@ -1,2 +1,2 @@
-add_lunch_combo cm_lt03lte-userdebug
+add_lunch_combo omni_lt03lte-userdebug
 
