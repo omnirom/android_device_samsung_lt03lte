@@ -99,3 +99,24 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Ril
 BOARD_RIL_CLASS := ../../../device/samsung/lt03lte/ril
+
+# TWRP specific build flags
+DEVICE_RESOLUTION := 2560x1600
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+#TW_BRIGHTNESS_PATH := /sys/devices/qcom,mdss_dsi_samsung_octa_1080p_cmd.71/lcd/panel/panel/brightness
+#TW_MAX_BRIGHTNESS := 255
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
+#TW_INCLUDE_CRYPTO := true
+#TW_INCLUDE_CRYPTO_SAMSUNG := true
+#TW_CRYPTO_FS_TYPE := "ext4"
+#TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p26"
+#TW_CRYPTO_MNT_POINT := "/data"
+#TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,noauto_da_alloc,discard,journal_async_commit,errors=panic"
+#TW_CRYPTO_FS_FLAGS := "0x00000406"
+#TW_CRYPTO_KEY_LOC := "footer"
+TW_NO_SCREEN_TIMEOUT := true
+

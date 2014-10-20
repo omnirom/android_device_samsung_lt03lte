@@ -15,5 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_jflte.mk
+    $(LOCAL_DIR)/omni_lt03lte.mk
 
