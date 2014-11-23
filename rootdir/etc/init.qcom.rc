@@ -290,6 +290,14 @@ on post-fs-data
     chmod 0600 /dev/btlock
     chown bluetooth bluetooth /dev/btlock
 
+    # Power Hal Permissions
+    chown system system /sys/class/input/input2/enabled
+    chown system system /sys/class/input/input3/enabled
+    chown system system /sys/class/input/input18/enabled
+    chmod 0660 /sys/class/input/input2/enabled
+    chmod 0660 /sys/class/input/input3/enabled
+    chmod 0660 /sys/class/input/input18/enabled
+
     #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
     mkdir /data/system 0775 system system
     #symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
