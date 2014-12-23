@@ -40,7 +40,7 @@ import java.util.Collections;
  *
  * {@hide}
  */
-public class HlteRIL extends RIL implements CommandsInterface {
+public class lt03lteRIL extends RIL implements CommandsInterface {
 
     private static final int RIL_REQUEST_DIAL_EMERGENCY = 10016;
     private static final int RIL_UNSOL_RESPONSE_IMS_NETWORK_STATE_CHANGED = 1036;
@@ -49,7 +49,7 @@ public class HlteRIL extends RIL implements CommandsInterface {
     private static final int RIL_UNSOL_WB_AMR_STATE = 11017;
     private static final int RIL_UNSOL_RESPONSE_HANDOVER = 11021;
 
-    public HlteRIL(Context context, int networkMode, int cdmaSubscription) {
+    public lt03lteRIL(Context context, int networkMode, int cdmaSubscription) {
         super(context, networkMode, cdmaSubscription);
         mQANElements = 6;
     }
