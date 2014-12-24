@@ -29,7 +29,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.lte_vrat_report=1 \
     persist.radio.mode_pref_nv10=1 \
+    ro.ril.telephony.mqanelements=6 \
+    ro.telephony.ril_class=hlteRIL
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sensors=1
+
