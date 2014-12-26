@@ -119,7 +119,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libargs=-d /dev/smd0 \
     rild.libpath=/system/lib/libsec-ril.so \
     ro.ril.telephony.mqanelements=6 \
-    ro.telephony.ril_class=HlteRIL \
     telephony.lteOnGSMDevice=1 \
     ro.telephony.default_network=9
 
