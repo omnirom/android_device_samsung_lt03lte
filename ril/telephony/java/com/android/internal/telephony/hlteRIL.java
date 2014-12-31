@@ -65,6 +65,7 @@ public class hlteRIL extends RIL implements CommandsInterface {
     private boolean mIsSendingSMS = false;
     protected boolean isGSM = false;
     public static final long SEND_SMS_TIMEOUT_IN_MS = 30000;
+    private boolean newril = needsOldRilFeature("newril"); //4.4.4 verson of Samsung RIL
 
     private Message mPendingGetSimStatus;
 
@@ -669,5 +670,21 @@ public class hlteRIL extends RIL implements CommandsInterface {
             super.getIccCardStatus(mPendingGetSimStatus);
             mPendingGetSimStatus = null;
         }
+    }
+
+
+    @Override
+    public void
+    acceptCall (Message result) {
+        if(!newril){
+            super.acceptCall(result);
+            return;
+        }
+        RILRequest rr
+        = RILRequest.obtain(RIL_REQUEST_ANSWER, result);
+        if (RILJ_LOGD) riljLog(rr.serialString() + "> " + requestToString(rr.mRequest));
+        rr.mParcel.writeInt(1);
+        rr.mParcel.writeInt(0);
+        send(rr);
     }
 }
