@@ -106,7 +106,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_RIL_CLASS := ../../../device/samsung/lt03lte/ril
 
 # TWRP specific build flags
-DEVICE_RESOLUTION := 2560x1600
+TW_THEME := landscape_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
