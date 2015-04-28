@@ -111,5 +111,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnGSMDevice=1 \
     ro.telephony.default_network=9
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera2.portability.force_api=1
+
 # Common msm8974
 $(call inherit-product, device/samsung/msm8974-common/msm8974.mk)
