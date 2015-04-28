@@ -121,3 +121,7 @@ TW_HAS_DOWNLOAD_MODE := true
 #TW_CRYPTO_KEY_LOC := "footer"
 TW_NO_SCREEN_TIMEOUT := true
 
+include device/qcom/sepolicy/sepolicy.mk
+
+BOARD_SEPOLICY_DIRS += \
+    $(COMMON_PATH)/sepolicy
