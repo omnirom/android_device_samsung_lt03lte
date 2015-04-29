@@ -58,7 +58,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         /* lt03ltevzw */
         cdma_properties("0");
         property_set("ro.build.fingerprint", "samsung/lt03ltevzw/lt03lte:4.4.2/KOT49H/P605VVRUCNC2:user/release-keys");
-        property_set("ro.build.description", "hltevzw-user 4.4.2 KOT49H P605VVRUCNC2 release-keys");
+        property_set("ro.build.description", "lt03ltevzw-user 4.4.2 KOT49H P605VVRUCNC2 release-keys");
         property_set("ro.product.model", "SM-P605V");
         property_set("ro.product.device", "lt03ltevzw");
         property_set("ro.cdma.home.operator.alpha", "Verizon");
@@ -67,14 +67,14 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         /* lt03ltesks */
         gsm_properties();
         property_set("ro.build.fingerprint", "samsung/lt03ltesks/lt03lte:4.4.2/KOT49H/P605SKSUCND6:user/release-keys");
-        property_set("ro.build.description", "hlteusc-user 4.4.2 KOT49H P605SKSUCND6 release-keys");
+        property_set("ro.build.description", "lt03lteusc-user 4.4.2 KOT49H P605SKSUCND6 release-keys");
         property_set("ro.product.model", "SM-P605S");
         property_set("ro.product.device", "lt03ltesks");
     } else if (strstr(bootloader, "P605M")) {
         /* lt03ltecmo */
         gsm_properties();
-        property_set("ro.build.fingerprint", "samsung/lt03ltecmo/hlteusc:4.4.2/KOT49H/P605UBUUCND6:user/release-keys");
-        property_set("ro.build.description", "hlteusc-user 4.4.2 KOT49H P605UBUUCND6 release-keys");
+        property_set("ro.build.fingerprint", "samsung/lt03ltecmo/lt03lteusc:4.4.2/KOT49H/P605UBUUCND6:user/release-keys");
+        property_set("ro.build.description", "lt03lteusc-user 4.4.2 KOT49H P605UBUUCND6 release-keys");
         property_set("ro.product.model", "SM-P605M");
         property_set("ro.product.device", "lt03ltecmo");
     } else if (strstr(bootloader, "P607T")) {
