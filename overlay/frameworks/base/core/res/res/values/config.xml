@@ -245,7 +245,7 @@
     <bool name="config_enableTranslucentDecor">true</bool>
 
     <!-- Boolean to enable stylus gestures -->
-    <bool name="config_stylusGestures">true</bool>
+    <!--bool name="config_stylusGestures">true</bool-->
 
     <bool name="config_hotswapCapable">true</bool>
 
