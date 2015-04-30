@@ -49,6 +49,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
+# MSM IPC Router security configuration
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/sec_config:system/etc/sec_config
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8974 \
