@@ -94,16 +94,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
 
-# Wifi
+# wifi
 PRODUCT_PACKAGES += \
-    libnetcmdiface \
-    macloader \
-    hostapd \
+    mac-update \
+    wcnss_service \
     libwpa_client \
-    wpa_supplicant
+    hostapd \
+    wpa_supplicant \
+    wpa_supplicant.conf \
+    dhcpcd.conf
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
