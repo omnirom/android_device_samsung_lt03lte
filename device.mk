@@ -108,6 +108,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril_class=lt03lteRIL \
     telephony.lteOnGSMDevice=1 \
     ro.telephony.default_network=9
 
