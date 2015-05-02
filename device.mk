@@ -111,5 +111,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     telephony.lteOnGSMDevice=1 \
     ro.telephony.default_network=9
 
+# Audio Configuration
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qc.sdk.audio.fluencetype=fluence \
+    persist.audio.fluence.voicecall=true \
+    af.resampler.quality=4 \
+    audio.offload.buffer.size.kb=32 \
+    audio.offload.gapless.enabled=true \
+    use.voice.path.for.pcm.voip=true \
+    av.offload.enable=false \
+    av.streaming.offload.enable=false \
+    audio.offload.pcm.16bit.enable=true \
+    audio.offload.multiple.enabled=false
+
 # Common msm8974
 $(call inherit-product, device/samsung/msm8974-common/msm8974.mk)
