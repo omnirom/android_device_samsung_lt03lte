@@ -80,9 +80,8 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
 
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
-
-BOARD_SEPOLICY_DIRS += \
-    device/samsung/lt03lte/sepolicy
+BOARD_SEPOLICY_UNION += macloader.te
+BOARD_SEPOLICY_DIRS += device/samsung/lt03lte/sepolicy
 
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI := true
