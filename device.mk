@@ -147,6 +147,9 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wpa_supplicant
 
+RODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
@@ -159,6 +162,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Allow lockscreen rotation
 PRODUCT_PROPERTY_OVERRIDES += \
     lockscreen.rot_override=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.nfc.port=I2C
 
 # Common msm8974
 $(call inherit-product, device/samsung/msm8974-common/msm8974.mk)
