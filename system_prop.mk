@@ -2,9 +2,7 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     av.offload.enable=false \
     persist.audio.fluence.speaker=true \
-    persist.audio.fluence.voicecall=true \
     persist.audio.fluence.voicerec=false \
-    ro.qc.sdk.audio.fluencetype=fluence \
     use.voice.path.for.pcm.voip=false \
     use.dedicated.device.for.voip=true
 
