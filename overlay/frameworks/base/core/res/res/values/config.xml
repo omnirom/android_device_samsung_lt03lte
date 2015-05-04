@@ -60,13 +60,18 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>1</item>
-        <item>1</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </integer-array>
-
+       <item>14</item>
+       <item>28</item>
+       <item>37</item>
+       <item>51</item>
+       <item>71</item>
+       <item>80</item>
+       <item>96</item>
+       <item>108</item>
+       <item>144</item>
+       <item>181</item>
+       <item>255</item>
+   </integer-array>
 
     <!-- Minimum screen brightness allowed by the power manager. -->
     <integer name="config_screenBrightnessDim">10</integer>
