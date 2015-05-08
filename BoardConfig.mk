@@ -111,6 +111,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Ril
 BOARD_RIL_CLASS := ../../../device/samsung/lt03lte/ril
 
+# Bootanimation
+TARGET_BOOTANIMATION_SIZE := 2560x1440
+
 # TWRP specific build flags
 TW_THEME := landscape_hdpi
 RECOVERY_SDCARD_ON_DATA := true
