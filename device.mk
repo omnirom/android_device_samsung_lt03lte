@@ -57,6 +57,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     av.streaming.offload.enable=false \
     audio.offload.pcm.16bit.enable=true \
     audio.offload.multiple.enabled=false
+    persist.audio.fluence.speaker=true \
+    persist.audio.fluence.voicerec=false \
+    use.dedicated.device.for.voip=true
+
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hdcp2.rx=tz \
+    ro.qualcomm.cabl=1 \
+    ro.secwvk=144 \
+    ro.sf.lcd_density=320
 
 # MSM IPC Router security configuration
 PRODUCT_COPY_FILES += \
@@ -70,6 +80,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/gps.conf:/system/etc/gps.conf \
     $(LOCAL_PATH)/gps/etc/sap.conf:/system/etc/sap.conf
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.gps.qc_nlp_in_use=0 \
+    ro.gps.agps_provider=1 \
+    ro.qc.sdk.izat.premium_enabled=0 \
+    ro.qc.sdk.izat.service_mask=0x0
 
 # Input device
 PRODUCT_COPY_FILES += \
@@ -93,6 +109,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
+# Radio
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.data.netmgrd.qos.enable=true \
+    persist.radio.add_power_save=1 \
+    persist.radio.apm_sim_not_pwdn=1 \
+    persist.radio.lte_vrat_report=1 \
+    persist.radio.mode_pref_nv10=1 \
+    rild.libargs=-d /dev/smd0 \
+    rild.libpath=/system/lib/libsec-ril.so \
+    ro.ril.telephony.mqanelements=6 \
+    ro.telephony.ril_class=HlteRIL \
+    telephony.lteOnGSMDevice=1 \
+    ro.telephony.default_network=9
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -102,6 +132,10 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc
+
+# Sensors
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sensors=1
 
 # Thermal
 PRODUCT_COPY_FILES += \
@@ -120,12 +154,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    telephony.lteOnGSMDevice=1 \
-    ro.telephony.default_network=9
-
+# SELinux
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=0
+
+# Allow lockscreen rotation
+PRODUCT_PROPERTY_OVERRIDES += \
+    lockscreen.rot_override=true
 
 # Common msm8974
 $(call inherit-product, device/samsung/msm8974-common/msm8974.mk)
