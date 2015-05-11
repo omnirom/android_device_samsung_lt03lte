@@ -78,11 +78,6 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
 
-# SELinux
--include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_UNION += macloader.te
-BOARD_SEPOLICY_DIRS += device/samsung/lt03lte/sepolicy
-
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI := true
 BOARD_WLAN_DEVICE := bcmdhd
@@ -115,6 +110,25 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Ril
 BOARD_RIL_CLASS := ../../../device/samsung/lt03lte/ril
+
+# selinux
+include device/qcom/sepolicy/sepolicy.mk
+
+BOARD_SEPOLICY_DIRS += \
+    $(LOCAL_PATH)/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    bluetooth.te \
+    keystore.te \
+    mpdecision.te \
+    platform_app.te \
+    rild.te \
+    rmt_storage.te \
+    surfaceflinger.te \
+    system_app.te \
+    system_server.te \
+    time_daemon.te \
+    untrusted_app.te
 
 # Bootanimation
 TARGET_BOOTANIMATION_SIZE := 2560x1440
