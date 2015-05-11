@@ -1,2 +1,5 @@
-allow rild proc_net:file { write };
-allow rild sysfs_sec:file { getattr open read write };
+allow rild socket_device:dir { write remove_name add_name };
+allow rild socket_device:sock_file { create unlink setattr };
+allow rild proc_net:file write;
+allow rild self:capability dac_override;
+allow rild unlabeled:file { read getattr open };
