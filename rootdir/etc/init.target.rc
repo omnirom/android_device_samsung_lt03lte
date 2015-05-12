@@ -40,8 +40,6 @@ on fs
     write /sys/devices/msm_sdcc.3/mmc_host/mmc2/power/control on
 
     mount_all fstab.qcom
-    restorecon_recursive /persist
-    restorecon_recursive /efs
 
     setprop ro.crypto.fuse_sdcard true
 
@@ -66,6 +64,9 @@ on fs
     mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware-modem ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0
      write /sys/kernel/boot_adsp/boot 1
      setprop qcom.audio.init complete
+
+    restorecon_recursive /persist
+    restorecon_recursive /efs
 
 on post-fs-data
     mkdir /data/tombstones 0771 system system
