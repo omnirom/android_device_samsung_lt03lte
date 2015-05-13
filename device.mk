@@ -118,8 +118,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libargs=-d /dev/smd0 \
     rild.libpath=/system/lib/libsec-ril.so \
     ro.ril.telephony.mqanelements=6 \
-    telephony.lteOnGSMDevice=1 \
-    ro.telephony.default_network=9
 
 # Ramdisk
 PRODUCT_PACKAGES += \
